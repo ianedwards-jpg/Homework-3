@@ -18,7 +18,8 @@
 
 
 //Define Variables, set parameters  
-    var alphChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var lowChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var upChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     var numChars = ["0","1","2","3","4","5","6","7","8","9"]
     var speChars = ["!","@","#","$","%","^","&","*","?","/"]
 
@@ -28,12 +29,42 @@
                   var lowCase = confirm("Include lowercase characters?");
                   var numCase = confirm("Include numerical characters?");
                   var speCase = confirm("Include special characters:'!,@,#,$,%,^,&,*,?,/'?");
-       }
+                }
         else {
-        alert("Insufficient Value.");
-              }
-    // Change alphabet strings to desired paramenters
+            alert("Insufficient Value.");
+        }
+
+    // Change alphabet strings to desired paramenters and create upper and lowercase elements
     if(uppCase) {
+       //(alphChars.toUpperCase())
+       document.createElement(upperCase)
+    }
+
+    if(lowCase) {
+       (alphChars.toLowerCase())
+       document.createElement(lowerCase)
+    }
+
+    // Create numeric and special character elements
+    if(numCase) {
+       //(alphChars.toUpperCase())
+       document.createElement(numCase)
+    }
+
+    if(speCase) {
+       //(alphChars.toUpperCase())
+       document.createElement(specCase)
+    }
+    // document.
+
+
+
+</script>
+</body> 
+
+</html>
+
+<!-- if(uppCase) {
        (alphChars.toUpperCase())
        document.createElement(upperCase)
     }
@@ -42,11 +73,15 @@
        (alphChars.toLowerCase())
        document.createElement(lowerCase)
     }
-    // 
 
+    // Create numeric and special character elements
+    if(numCase) {
+       //(alphChars.toUpperCase())
+       document.createElement(upperCase)
+    }
 
-
-</script>
-</body> 
-
-</html>
+    if(speCase) {
+       //(alphChars.toUpperCase())
+       document.createElement(upperCase)
+    }
+    // document.-->
