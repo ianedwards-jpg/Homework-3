@@ -40,28 +40,52 @@
     if(uppCase) {
        var upperString = upChars.toString();
         }
+        else {
+        var lowerString = nullVal.toString();
+    }
 
     if(lowCase) {
        var lowerString = lowChars.toString();
        }
+        else {
+        var lowerString = nullVal.toString();
+    }
 
-    // Create numeric and special character elements
     if(numCase) {
        var numberString = numChars.toString();
        }
-    else(numCase) {
-
+        else {
+        var numberString = nullVal.toString();
     }
 
     if(speCase) {
        var specialString = speChars.toString();    
        }
-       
-
-    //String Concat and trim Function
-    function strConcat(); {
-        var conString = passArry.concat(upperString,lowerString,numberString,specialString);
+        else {
+        var specialString = nullVal.toString();
     }
+
+    //String Concat Function
+    function strConcat(conString) {
+        var conString = upperString.concat(lowerString,numberString,specialString);
+    
+    //String Randomize Function
+        function createPass(length) {
+            var result           = '';
+            var characters       = conString;
+            var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+    }
+console.log(createPass(passLength));
+}
+
+
+
+
+
 
 </script>
 </body> 
