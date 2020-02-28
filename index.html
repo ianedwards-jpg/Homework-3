@@ -1,109 +1,34 @@
 <!DOCTYPE html>
-<html lang="en us"> 
-<head>
-    <!--Meta Tags-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="UTF-8"> 
-    <!--CSS/Style Tags-->
-            <!--BootStrap CSS-->
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-            <!--Other CSS-->
-    <!--<link rel="stylesheet" href="./assets/css/style.css"> --> 
-    <!--Page Title-->
-	<title> ....... </title>
-</head>
-
-<body>
-    <script type="text/javascript">
-
-
-//Define Variables, set parameters  
-    var upChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    var lowChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-    var numChars = ["0","1","2","3","4","5","6","7","8","9"]
-    var speChars = ["!","@","#","$","%","^","&","*","?","/"]
-    var passArry = [""]
-    var nullVal  = [""]
-
-    var passLength = prompt("Choose password length between 8-128 characters.");
-       if (passLength >=8 && passLength <=128) { 
-                  var uppCase = confirm("Include uppercase characters?");
-                  var lowCase = confirm("Include lowercase characters?");
-                  var numCase = confirm("Include numerical characters?");
-                  var speCase = confirm("Include special characters:'!,@,#,$,%,^,&,*,?,/'?");
-                }
-        else {
-            alert("Insufficient Value.");
-        }
-
-    // Change variables to strings
-    if(uppCase) {
-       var upperString = upChars.toString();
-        }
-
-    if(lowCase) {
-       var lowerString = lowChars.toString();
-       }
-
-    // Create numeric and special character elements
-    if(numCase) {
-       var numberString = numChars.toString();
-       }
-     
-    if(speCase) {
-       var specialString = speChars.toString();    
-       }
-       
-
-    //String Concat and trim Function
-   
-    //function strConcat() {
-       // var conString = upperString.concat(
-        //  lowerString,
-         // numberString,
-         // specialString
-       // );
-    //}
-      //String Randomize Function
-      function createPass(length) {
-        var result = '';
-        var conString = upperString.concat(
-          lowerString,
-          numberString,
-          specialString
-        ); 
-        var conStringLength = conString.length
-        for (var i = 0; i < passLength; i++) {
-          result += characters.charAt(
-            Math.floor(Math.random() * charactersLength)
-          );
-        }
-        return result;
-        console.log(result)
-      }
-</script>
-</body> 
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-<!-- if(uppCase) {
-       (alphChars.toUpperCase())
-       document.createElement(upperCase)
-    }
-
-    if(lowCase) {
-       (alphChars.toLowerCase())
-       document.createElement(lowerCase)
-    }
-
-    // Create numeric and special character elements
-    if(numCase) {
-       //(alphChars.toUpperCase())
-       document.createElement(upperCase)
-    }
-
-    if(speCase) {
-       //(alphChars.toUpperCase())
-       document.createElement(upperCase)
-    }
-    // document.-->
