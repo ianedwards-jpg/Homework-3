@@ -1,13 +1,11 @@
 
-//Define Variables, set parameters  
-var chars = ''
+//Define Variables 
+var chars = ''     //Create empty string for add parameters
 var upChars = "ABCDEFGHIJKLMNOPQURSTUVWXYZ"
 var lowChars = "abcdefghijklmnopqrstuvwxyz"
 var numChars = "0123456789"
 var speChars = "!@#$%^&*?/"
-var passArry = [""]
-var nullVal = [""]
-
+//
 var passLength = prompt("Choose password length between 8-128 characters.");
 if (passLength >= 8 && passLength <= 128) {
     var uppCase = confirm("Include uppercase characters?");
@@ -28,7 +26,6 @@ if (lowCase) {
     chars += lowChars
 }
 
-// Create numeric and special character elements
 if (numCase) {
     chars += numChars
 }
@@ -37,36 +34,21 @@ if (speCase) {
     chars += speChars
 }
 
-
-//String Concat and trim Function
-
-//function strConcat() {
-// var conString = upperString.concat(
-//  lowerString,
-// numberString,
-// specialString
-// );
-//}
-//String Randomize Function
+// Create Password Function 
 function createPass() {
     var result = '';
-    // var conString = upperString.concat(
-    //     lowerString,
-    //     numberString,
-    //     specialString
-    // );
-    // var conStringLength = conString.length
-    for (var i = 0; i < Number(passLength); i++) {
-        result += chars.charAt(
-            Math.floor(Math.random() * chars.length)
+    // For loop to create password
+    for (var i = 0; i < Number(passLength); i++) { //Change passLength string to numbers to let for loop function
+        result += chars.charAt(                    //Add new random digits to result variable 
+            Math.floor(Math.random() * chars.length) //Define char string length so loop can use it 
         );
     }
-    console.log(result)
+    console.log(result)                             // Log results to console
 
     return result;
 }
 
-//   // Assignment Code
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
