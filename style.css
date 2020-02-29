@@ -1,0 +1,12 @@
+body {
+    background-image: url("https://techcrunch.com/wp-content/uploads/2014/12/matrix.jpg?w=730&crop=1");
+    background-color: #cccccc;
+   }
+
+h1, h2 {
+    color: antiquewhite;
+    text-align: center;
+}
+.cardbody {
+    align-items: center;
+}

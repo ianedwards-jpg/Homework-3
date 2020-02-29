@@ -36,14 +36,14 @@ if (speCase) {
 
 // Create Password Function 
 function createPass() {
-    var result = '';
+    var result = '';                                        //Created password string
     // For loop to create password
-    for (var i = 0; i < Number(passLength); i++) { //Change passLength string to numbers to let for loop function
-        result += chars.charAt(                    //Add new random digits to result variable 
-            Math.floor(Math.random() * chars.length) //Define char string length so loop can use it 
+    for (var i = 0; i < Number(passLength); i++) {          //Change passLength string to numbers to let for loop function
+        result += chars.charAt(                             //Add new random digits to result variable 
+            Math.floor(Math.random() * chars.length)        //Define char string length so loop can use it 
         );
     }
-    console.log(result)                             // Log results to console
+    console.log(result)                                    // Log results to console
 
     return result;
 }
@@ -52,11 +52,11 @@ function createPass() {
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-    var password = createPass();
-    var passwordText = document.querySelector("#password");
+function writePassword() {                                      //Call writePassword function
+    var password = createPass();                                //Define password variable as the result of writePassword function
+    var passwordText = document.querySelector("#password");     //Pas
 
-    passwordText.value = password;
+    passwordText.value = password;                              //Password text is displayed in read-only section 
 
 }
 
