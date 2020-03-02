@@ -38,8 +38,8 @@ if (speCase) {
 function createPass() {
     var result = '';
     // For loop to create password
-    for (var i = 0; i < Number(passLength); i++) { //Change passLength string to numbers to let for loop function
-        result += chars.charAt(                    //Add new random digits to result variable 
+    for (var i = 0; i < Number(passLength); i++) {     //Change passLength string to numbers to let for loop function
+        result += chars.charAt(                       //Add new random digits to result variable 
             Math.floor(Math.random() * chars.length) //Define char string length so loop can use it 
         );
     }
