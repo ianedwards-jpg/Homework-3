@@ -1,4 +1,3 @@
-
 //Define Variables 
 var chars = ''     //Create empty string for add parameters
 var upChars = "ABCDEFGHIJKLMNOPQURSTUVWXYZ"
@@ -6,17 +5,21 @@ var lowChars = "abcdefghijklmnopqrstuvwxyz"
 var numChars = "0123456789"
 var speChars = "!@#$%^&*?/"
 //
+
 var passLength = prompt("Choose password length between 8-128 characters.");
 if (passLength >= 8 && passLength <= 128) {
-    var uppCase = confirm("Include uppercase characters?");
-    var lowCase = confirm("Include lowercase characters?");
-    var numCase = confirm("Include numerical characters?");
-    var speCase = confirm("Include special characters:'!,@,#,$,%,^,&,*,?,/'?");
-}
+        var uppCase = confirm("Include uppercase characters?");
+        var lowCase = confirm("Include lowercase characters?");
+        var numCase = confirm("Include numerical characters?");
+        var speCase = confirm("Include special characters:'!,@,#,$,%,^,&,*,?,/'?");
+        }
+
 else {
     alert("Insufficient Value.");
+    window.location.reload();
 }
 
+ 
 // Change variables to strings
 if (uppCase) {
     chars+= upChars
@@ -62,3 +65,5 @@ function writePassword() {                                      //Call writePass
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+//Add event listener to load starting function on DOM load 
+document.addEventListener("DOMContentLoaded", startFunc) 
