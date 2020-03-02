@@ -65,5 +65,3 @@ function writePassword() {                                      //Call writePass
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-//Add event listener to load starting function on DOM load 
-document.addEventListener("DOMContentLoaded", startFunc) 
